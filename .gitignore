@@ -13,3 +13,7 @@
 *.lai
 *.la
 *.a
+Builds/MacOSX/OwlSim.xcodeproj/project.xcworkspace/
+Builds/MacOSX/OwlSim.xcodeproj/xcuserdata/
+Builds/MacOSX/build/
+auval-report.txt
