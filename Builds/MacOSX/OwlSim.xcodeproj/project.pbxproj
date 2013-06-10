@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		031E11863DC8787C93BE4A9D /* juce_audio_devices.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C79E3D1876E1766B23CC8C0 /* juce_audio_devices.mm */; };
 		077C569258C49AF5A000DFFB /* juce_events.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AD11D5C4A6DB4FA350029F0 /* juce_events.mm */; };
+		1A2F99601765446700B637F0 /* DualTremoloPatch.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */; };
 		1A8FB08B176255220037CA58 /* AUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB07C176255220037CA58 /* AUBase.cpp */; };
 		1A8FB08C176255220037CA58 /* AUDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB07E176255220037CA58 /* AUDispatch.cpp */; };
 		1A8FB08D176255220037CA58 /* AUInputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB080176255220037CA58 /* AUInputElement.cpp */; };
@@ -206,6 +207,7 @@
 		197D423C4E8D4CCB241232E4 /* juce_GroupComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_GroupComponent.cpp; path = ../../modules/juce_gui_basics/layout/juce_GroupComponent.cpp; sourceTree = SOURCE_ROOT; };
 		19C60F7192B565A68713F8C4 /* juce_FileChooser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_FileChooser.h; path = ../../modules/juce_gui_basics/filebrowser/juce_FileChooser.h; sourceTree = SOURCE_ROOT; };
 		19EA570EA98642386BD8C246 /* juce_AudioThumbnailBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_AudioThumbnailBase.h; path = ../../modules/juce_audio_utils/gui/juce_AudioThumbnailBase.h; sourceTree = SOURCE_ROOT; };
+		1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DualTremoloPatch.hpp; path = ../../Source/Patches/DualTremoloPatch.hpp; sourceTree = "<group>"; };
 		1A685AC22C45EB2AEF431DA5 /* juce_android_JNIHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_android_JNIHelpers.h; path = ../../modules/juce_core/native/juce_android_JNIHelpers.h; sourceTree = SOURCE_ROOT; };
 		1A8AA4AFB584941E80623655 /* juce_URL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_URL.cpp; path = ../../modules/juce_core/network/juce_URL.cpp; sourceTree = SOURCE_ROOT; };
 		1A8C1FFD5843A0E9CFE0388D /* juce_CoreAudioFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_CoreAudioFormat.h; path = ../../modules/juce_audio_formats/codecs/juce_CoreAudioFormat.h; sourceTree = SOURCE_ROOT; };
@@ -1350,6 +1352,14 @@
 			name = native;
 			sourceTree = "<group>";
 		};
+		1A2F996117654EE600B637F0 /* My Patches */ = {
+			isa = PBXGroup;
+			children = (
+				1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */,
+			);
+			name = "My Patches";
+			sourceTree = "<group>";
+		};
 		1A8FB056176254D40037CA58 /* AU-lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1762,6 +1772,7 @@
 		49162BE66036D49F8A28C785 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1A2F996117654EE600B637F0 /* My Patches */,
 				738A28641A75A547CE5DAEBA /* GainPatch.hpp */,
 				E4887E496274EE39EFA4F332 /* TemplatePatch.hpp */,
 				D002D794BF298922071C325C /* StompGui.cpp */,
@@ -3192,6 +3203,7 @@
 				1A8FB175176255DB0037CA58 /* AUCarbonViewDispatch.cpp in Sources */,
 				1A8FB176176255DB0037CA58 /* AUControlGroup.cpp in Sources */,
 				1A8FB177176255DB0037CA58 /* CarbonEventHandler.cpp in Sources */,
+				1A2F99601765446700B637F0 /* DualTremoloPatch.hpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
