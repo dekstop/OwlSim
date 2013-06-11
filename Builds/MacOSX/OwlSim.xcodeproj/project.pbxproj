@@ -208,6 +208,7 @@
 		19C60F7192B565A68713F8C4 /* juce_FileChooser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_FileChooser.h; path = ../../modules/juce_gui_basics/filebrowser/juce_FileChooser.h; sourceTree = SOURCE_ROOT; };
 		19EA570EA98642386BD8C246 /* juce_AudioThumbnailBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_AudioThumbnailBase.h; path = ../../modules/juce_audio_utils/gui/juce_AudioThumbnailBase.h; sourceTree = SOURCE_ROOT; };
 		1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DualTremoloPatch.hpp; path = ../../Source/Patches/DualTremoloPatch.hpp; sourceTree = "<group>"; };
+		1A4F6FC8176724CC003CE8EB /* SimpleDelayPatch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimpleDelayPatch.hpp; path = ../../Source/Patches/SimpleDelayPatch.hpp; sourceTree = "<group>"; };
 		1A685AC22C45EB2AEF431DA5 /* juce_android_JNIHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_android_JNIHelpers.h; path = ../../modules/juce_core/native/juce_android_JNIHelpers.h; sourceTree = SOURCE_ROOT; };
 		1A8AA4AFB584941E80623655 /* juce_URL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_URL.cpp; path = ../../modules/juce_core/network/juce_URL.cpp; sourceTree = SOURCE_ROOT; };
 		1A8C1FFD5843A0E9CFE0388D /* juce_CoreAudioFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_CoreAudioFormat.h; path = ../../modules/juce_audio_formats/codecs/juce_CoreAudioFormat.h; sourceTree = SOURCE_ROOT; };
@@ -1356,6 +1357,7 @@
 			isa = PBXGroup;
 			children = (
 				1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */,
+				1A4F6FC8176724CC003CE8EB /* SimpleDelayPatch.hpp */,
 			);
 			name = "My Patches";
 			sourceTree = "<group>";
