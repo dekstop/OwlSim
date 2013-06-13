@@ -4,6 +4,7 @@
 #include "Patches/TemplatePatch.hpp"
 #include "Patches/DualTremoloPatch.hpp"
 #include "Patches/SimpleDelayPatch.hpp"
+#include "Patches/SampleJitterPatch.hpp"
 
 #define REGISTER_PATCH(T, STR) registerPatch(STR, Register<T>::construct)
 
@@ -12,6 +13,7 @@ PatchRegistry::PatchRegistry(){
     REGISTER_PATCH(TemplatePatch, "Template");
     REGISTER_PATCH(DualTremoloPatch, "Dual Tremolo");
     REGISTER_PATCH(SimpleDelayPatch, "Simple Delay");
+    REGISTER_PATCH(SampleJitterPatch, "Sample Jitter");
 }
 
 StringArray PatchRegistry::getNames(){

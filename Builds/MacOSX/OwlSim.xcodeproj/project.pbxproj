@@ -10,6 +10,7 @@
 		031E11863DC8787C93BE4A9D /* juce_audio_devices.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C79E3D1876E1766B23CC8C0 /* juce_audio_devices.mm */; };
 		077C569258C49AF5A000DFFB /* juce_events.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9AD11D5C4A6DB4FA350029F0 /* juce_events.mm */; };
 		1A2F99601765446700B637F0 /* DualTremoloPatch.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */; };
+		1A6AD9AE1769BAD300F81B55 /* SampleJitterPatch.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 1A6AD9AD1769BAD300F81B55 /* SampleJitterPatch.hpp */; };
 		1A8FB08B176255220037CA58 /* AUBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB07C176255220037CA58 /* AUBase.cpp */; };
 		1A8FB08C176255220037CA58 /* AUDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB07E176255220037CA58 /* AUDispatch.cpp */; };
 		1A8FB08D176255220037CA58 /* AUInputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB080176255220037CA58 /* AUInputElement.cpp */; };
@@ -210,6 +211,7 @@
 		1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DualTremoloPatch.hpp; path = ../../Source/Patches/DualTremoloPatch.hpp; sourceTree = "<group>"; };
 		1A4F6FC8176724CC003CE8EB /* SimpleDelayPatch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimpleDelayPatch.hpp; path = ../../Source/Patches/SimpleDelayPatch.hpp; sourceTree = "<group>"; };
 		1A685AC22C45EB2AEF431DA5 /* juce_android_JNIHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_android_JNIHelpers.h; path = ../../modules/juce_core/native/juce_android_JNIHelpers.h; sourceTree = SOURCE_ROOT; };
+		1A6AD9AD1769BAD300F81B55 /* SampleJitterPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SampleJitterPatch.hpp; path = ../../Source/Patches/SampleJitterPatch.hpp; sourceTree = "<group>"; };
 		1A8AA4AFB584941E80623655 /* juce_URL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_URL.cpp; path = ../../modules/juce_core/network/juce_URL.cpp; sourceTree = SOURCE_ROOT; };
 		1A8C1FFD5843A0E9CFE0388D /* juce_CoreAudioFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_CoreAudioFormat.h; path = ../../modules/juce_audio_formats/codecs/juce_CoreAudioFormat.h; sourceTree = SOURCE_ROOT; };
 		1A8FB07C176255220037CA58 /* AUBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AUBase.cpp; sourceTree = "<group>"; };
@@ -1358,6 +1360,7 @@
 			children = (
 				1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */,
 				1A4F6FC8176724CC003CE8EB /* SimpleDelayPatch.hpp */,
+				1A6AD9AD1769BAD300F81B55 /* SampleJitterPatch.hpp */,
 			);
 			name = "My Patches";
 			sourceTree = "<group>";
@@ -3074,6 +3077,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B428F3D76DBC02791A87A3A /* RecentFilesMenuTemplate.nib in Resources */,
+				1A6AD9AE1769BAD300F81B55 /* SampleJitterPatch.hpp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

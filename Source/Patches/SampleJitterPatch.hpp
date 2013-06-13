@@ -1,33 +1,36 @@
 //
-//  SimpleDelayPatch.hpp
+//  SampleJitterPatch.hpp
 //
-//  A basic delay effect.
+//  A distortion effect: delays incoming samples by random amounts of time.
+//  (Strictly speaking: play back samples taken from a randomly selected point
+//  in the near past. With variable near/far selection bias.)
 //
-//  Created by martind on 11/06/2013.
+//  Created by martind on 13/06/2013.
 //  http://github.com/dekstop/OwlSim
 //
 //  Parameter assignment:
-//  - A: delay time
-//  - B: feedback
+//  - A: max sample delay time
+//  - B: near/far sample selection bias
 //  - C:
 //  - D: dry/wet mix
 //  - Push-button:
 //
 //  TODO:
-//  - clear buffer tail when shortening delay time
-//    - OR: always write to full buffer, but stretch it (and adjust read/write speed)
-//  - better dry/wet mixing method (don't just fade over)
+//  - ...
 //
 
-#ifndef OwlSim_SimpleDelay_hpp
-#define OwlSim_SimpleDelay_hpp
+#ifndef OwlSim_SampleJitterPatch_hpp
+#define OwlSim_SampleJitterPatch_hpp
 
 #include "StompBox.h"
+//#include "juce_Random.h"
 
-class SimpleDelayPatch : public Patch {
+class SampleJitterPatch : public Patch {
     
-    const float MIN_DELAY = 0.01; // in seconds
-    const float MAX_DELAY = 8;
+    const float MIN_DELAY = 0.00001; // in seconds
+    const float MAX_DELAY = 0.02;
+    const float MIN_BIAS = 0.1; // bias acts as exponent on a random delay time, t = rnd^bias
+    const float MAX_BIAS = 6;
     
     float* circularBuffer;
     unsigned int bufferSize;
@@ -50,32 +53,32 @@ public:
 //        float p3 = getRampedParameterValue(PARAMETER_C);
         float p4 = getRampedParameterValue(PARAMETER_D);
 
-        unsigned int sampleDelay = (MIN_DELAY + p1 * (MAX_DELAY-MIN_DELAY)) * rate;
-        float feedback = p2;
+        unsigned int maxSampleDelay = rate * (MIN_DELAY + p1*p1 * (MAX_DELAY-MIN_DELAY));
+        float bias = MIN_BIAS + p2*p2 * (MAX_BIAS-MIN_BIAS);
         // float cutoff = p3;
         float dryWetMix = p4;
         
         int size = input.getSize();
         float* buf = input.getSamples();
-        int readIdx = writeIdx - sampleDelay;
-        while (readIdx<0)
-            readIdx += bufferSize;
+        Random r;
         for (int i=0; i<size; ++i)
         {
-            circularBuffer[writeIdx] =
-                circularBuffer[writeIdx] * feedback +
-                buf[i] * (1 - feedback);
+            int offset = round(maxSampleDelay * pow(r.nextFloat(), bias));
+            int readIdx = writeIdx - offset;
+            while (readIdx<0)
+                readIdx += bufferSize;
+
+            circularBuffer[writeIdx] = buf[i];
             buf[i] =
                 circularBuffer[readIdx] * dryWetMix +
                 buf[i] * (1 - dryWetMix);
 
-            writeIdx = (++writeIdx) % sampleDelay;
-            readIdx = (++readIdx) % sampleDelay;
+            writeIdx = (++writeIdx) % bufferSize;
         }
         output.setSamples(buf);
     }
     
-    ~SimpleDelayPatch(){
+    ~SampleJitterPatch(){
         free(circularBuffer);
     }
 
@@ -94,4 +97,4 @@ private:
     }
 };
 
-#endif // OwlSim_SimpleDelay_hpp
+#endif // OwlSim_SampleJitterPatch_hpp

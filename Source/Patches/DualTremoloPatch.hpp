@@ -1,3 +1,22 @@
+//
+//  DualTremoloPatch.hpp
+//
+//  Two independent tremolo LFOs.
+//
+//  Created by martind on 10/06/2013.
+//  http://github.com/dekstop/OwlSim
+//
+//  Parameter assignment:
+//  - A: frequency 1
+//  - B: amount 1
+//  - C: frequency 2
+//  - D: amount 2
+//  - Push-button:
+//
+//  TODO:
+//  - ...
+//
+
 #ifndef __DualTremoloPatch_hpp__
 #define __DualTremoloPatch_hpp__
 
