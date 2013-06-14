@@ -2,6 +2,7 @@
 
 #include "Patches/GainPatch.hpp"
 #include "Patches/TemplatePatch.hpp"
+#include "ParametricEqPatch.hpp"
 #include "Patches/DualTremoloPatch.hpp"
 #include "Patches/SimpleDelayPatch.hpp"
 #include "Patches/SampleJitterPatch.hpp"
@@ -10,10 +11,11 @@
 
 PatchRegistry::PatchRegistry(){
   REGISTER_PATCH(GainPatch, "Gain");
-    REGISTER_PATCH(TemplatePatch, "Template");
-    REGISTER_PATCH(DualTremoloPatch, "Dual Tremolo");
-    REGISTER_PATCH(SimpleDelayPatch, "Simple Delay");
-    REGISTER_PATCH(SampleJitterPatch, "Sample Jitter");
+  REGISTER_PATCH(TemplatePatch, "Template");
+  REGISTER_PATCH(ParametricEqPatch, "ParametricEQ");
+  REGISTER_PATCH(DualTremoloPatch, "Dual Tremolo");
+  REGISTER_PATCH(SimpleDelayPatch, "Simple Delay");
+  REGISTER_PATCH(SampleJitterPatch, "Sample Jitter");
 }
 
 StringArray PatchRegistry::getNames(){

@@ -378,6 +378,8 @@
 		1A8FB17A17625CF20037CA58 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		1A9D1C97E9D381D12A75587C /* juce_Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_Singleton.h; path = ../../modules/juce_core/memory/juce_Singleton.h; sourceTree = SOURCE_ROOT; };
 		1AD346FB4D1C7ED54A4A5349 /* juce_DirectoryContentsList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_DirectoryContentsList.cpp; path = ../../modules/juce_gui_basics/filebrowser/juce_DirectoryContentsList.cpp; sourceTree = SOURCE_ROOT; };
+		1AE935C4176A984B00C62E77 /* CircularBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CircularBuffer.hpp; path = ../../Source/Patches/CircularBuffer.hpp; sourceTree = "<group>"; };
+		1AE935C5176A984B00C62E77 /* ParametricEqPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ParametricEqPatch.hpp; path = ../../Source/Patches/ParametricEqPatch.hpp; sourceTree = "<group>"; };
 		1AF5B75CC26865F7B20F4135 /* juce_MemoryMappedAudioFormatReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_MemoryMappedAudioFormatReader.h; path = ../../modules/juce_audio_formats/format/juce_MemoryMappedAudioFormatReader.h; sourceTree = SOURCE_ROOT; };
 		1B3ED674CA92DD3EB9708D12 /* juce_BufferedInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_BufferedInputStream.h; path = ../../modules/juce_core/streams/juce_BufferedInputStream.h; sourceTree = SOURCE_ROOT; };
 		1C046F79D9DE8ACD9F66FB14 /* juce_ios_Windowing.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_ios_Windowing.mm; path = ../../modules/juce_gui_basics/native/juce_ios_Windowing.mm; sourceTree = SOURCE_ROOT; };
@@ -1778,6 +1780,8 @@
 			isa = PBXGroup;
 			children = (
 				1A2F996117654EE600B637F0 /* My Patches */,
+				1AE935C4176A984B00C62E77 /* CircularBuffer.hpp */,
+				1AE935C5176A984B00C62E77 /* ParametricEqPatch.hpp */,
 				738A28641A75A547CE5DAEBA /* GainPatch.hpp */,
 				E4887E496274EE39EFA4F332 /* TemplatePatch.hpp */,
 				D002D794BF298922071C325C /* StompGui.cpp */,
