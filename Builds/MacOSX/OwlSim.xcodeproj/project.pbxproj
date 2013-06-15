@@ -81,7 +81,7 @@
 		1A8FB176176255DB0037CA58 /* AUControlGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB16F176255DB0037CA58 /* AUControlGroup.cpp */; };
 		1A8FB177176255DB0037CA58 /* CarbonEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB171176255DB0037CA58 /* CarbonEventHandler.cpp */; };
 		1A8FB17B17625CF20037CA58 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8FB17A17625CF20037CA58 /* AudioUnit.framework */; };
-		1AE935C9176CDA0700C62E77 /* SimpleBiasedDelayPatch.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 1AE935C8176CDA0700C62E77 /* SimpleBiasedDelayPatch.hpp */; };
+		1AE935C9176CDA0700C62E77 /* BiasedDelayPatch.hpp in Resources */ = {isa = PBXBuildFile; fileRef = 1AE935C8176CDA0700C62E77 /* BiasedDelayPatch.hpp */; };
 		1BA14AFF90178E89C5F63512 /* PluginEditor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FCABDB5EED505CB62FC5895 /* PluginEditor.cpp */; };
 		216E52D41687727B449DDA1C /* juce_audio_basics.mm in Sources */ = {isa = PBXBuildFile; fileRef = 58F5D0262FF1DD8C076E1896 /* juce_audio_basics.mm */; };
 		22A48B407E6C898061F80EEE /* juce_RTAS_DigiCode3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D15E4DB09105838B2DCC3EB2 /* juce_RTAS_DigiCode3.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -383,7 +383,7 @@
 		1AE935C5176A984B00C62E77 /* ParametricEqPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ParametricEqPatch.hpp; path = ../../Source/Patches/ParametricEqPatch.hpp; sourceTree = "<group>"; };
 		1AE935C6176B1B3C00C62E77 /* BiasPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BiasPatch.hpp; path = ../../Source/Patches/BiasPatch.hpp; sourceTree = "<group>"; };
 		1AE935C7176CD50100C62E77 /* TripleTremoloPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TripleTremoloPatch.hpp; path = ../../Source/Patches/TripleTremoloPatch.hpp; sourceTree = "<group>"; };
-		1AE935C8176CDA0700C62E77 /* SimpleBiasedDelayPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SimpleBiasedDelayPatch.hpp; path = ../../Source/Patches/SimpleBiasedDelayPatch.hpp; sourceTree = "<group>"; };
+		1AE935C8176CDA0700C62E77 /* BiasedDelayPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BiasedDelayPatch.hpp; path = ../../Source/Patches/BiasedDelayPatch.hpp; sourceTree = "<group>"; };
 		1AF5B75CC26865F7B20F4135 /* juce_MemoryMappedAudioFormatReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_MemoryMappedAudioFormatReader.h; path = ../../modules/juce_audio_formats/format/juce_MemoryMappedAudioFormatReader.h; sourceTree = SOURCE_ROOT; };
 		1B3ED674CA92DD3EB9708D12 /* juce_BufferedInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_BufferedInputStream.h; path = ../../modules/juce_core/streams/juce_BufferedInputStream.h; sourceTree = SOURCE_ROOT; };
 		1C046F79D9DE8ACD9F66FB14 /* juce_ios_Windowing.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_ios_Windowing.mm; path = ../../modules/juce_gui_basics/native/juce_ios_Windowing.mm; sourceTree = SOURCE_ROOT; };
@@ -1368,7 +1368,7 @@
 				1AE935C7176CD50100C62E77 /* TripleTremoloPatch.hpp */,
 				1AE935C6176B1B3C00C62E77 /* BiasPatch.hpp */,
 				1A4F6FC8176724CC003CE8EB /* SimpleDelayPatch.hpp */,
-				1AE935C8176CDA0700C62E77 /* SimpleBiasedDelayPatch.hpp */,
+				1AE935C8176CDA0700C62E77 /* BiasedDelayPatch.hpp */,
 				1A6AD9AD1769BAD300F81B55 /* SampleJitterPatch.hpp */,
 			);
 			name = "My Patches";
@@ -3089,7 +3089,7 @@
 			files = (
 				5B428F3D76DBC02791A87A3A /* RecentFilesMenuTemplate.nib in Resources */,
 				1A6AD9AE1769BAD300F81B55 /* SampleJitterPatch.hpp in Resources */,
-				1AE935C9176CDA0700C62E77 /* SimpleBiasedDelayPatch.hpp in Resources */,
+				1AE935C9176CDA0700C62E77 /* BiasedDelayPatch.hpp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

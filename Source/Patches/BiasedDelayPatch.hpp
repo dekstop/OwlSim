@@ -1,5 +1,5 @@
 //
-//  SimpleBiasedDelayPatch.hpp
+//  BiasedDelayPatch.hpp
 //
 //  A basic delay effect with sample bias modulation.
 //  This can produce great nonlinear saturation effects, however
@@ -19,12 +19,12 @@
 //  - see SimpleDelayPatch.hpp
 //
 
-#ifndef OwlSim_SimpleBiasedDelayPatch_hpp
-#define OwlSim_SimpleBiasedDelayPatch_hpp
+#ifndef OwlSim_BiasedDelayPatch_hpp
+#define OwlSim_BiasedDelayPatch_hpp
 
 #include "StompBox.h"
 
-class SimpleBiasedDelayPatch : public Patch {
+class BiasedDelayPatch : public Patch {
   
   const float MIN_DELAY = 0.01; // in seconds
   const float MAX_DELAY = 4;
@@ -69,7 +69,7 @@ public:
     output.setSamples(buf);
   }
   
-  ~SimpleBiasedDelayPatch(){
+  ~BiasedDelayPatch(){
     free(circularBuffer);
   }
   
