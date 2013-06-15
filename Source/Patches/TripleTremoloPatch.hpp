@@ -3,7 +3,7 @@
 //
 //  Three independent tremolo LFOs.
 //
-//  Created by martind on 10/06/2013.
+//  Created by martind on 15/06/2013.
 //  http://github.com/dekstop/OwlSim
 //
 //  Parameter assignment:
