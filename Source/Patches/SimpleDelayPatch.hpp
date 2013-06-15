@@ -28,7 +28,7 @@
 class SimpleDelayPatch : public Patch {
   
   const float MIN_DELAY = 0.01; // in seconds
-  const float MAX_DELAY = 8;
+  const float MAX_DELAY = 4;
   
   float* circularBuffer;
   unsigned int bufferSize;
@@ -43,6 +43,7 @@ public:
     {
       bufferSize = MAX_DELAY * rate;
       circularBuffer = new float[bufferSize];
+      memset(circularBuffer, 0, bufferSize*sizeof(float));
       writeIdx = 0;
     }
 

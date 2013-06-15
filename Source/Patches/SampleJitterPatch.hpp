@@ -45,6 +45,7 @@ public:
     {
       bufferSize = MAX_DELAY * rate;
       circularBuffer = new float[bufferSize];
+      memset(circularBuffer, 0, bufferSize*sizeof(float));
       writeIdx = 0;
     }
 
