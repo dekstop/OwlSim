@@ -17,7 +17,6 @@
 //  - clear buffer tail when shortening delay time
 //    - OR: always write to full buffer, but stretch it (and adjust read/write speed)
 //  - better dry/wet mixing method (don't just fade over)
-//  - this is noisy as fuck, esp for short delay times; not entirely sure why.
 //
 
 #ifndef OwlSim_SimpleDelay_hpp
@@ -59,14 +58,14 @@ public:
     
     int size = input.getSize();
     float* buf = input.getSamples();
-    int readIdx = writeIdx - sampleDelay;
+    int readIdx = (writeIdx + 1) % sampleDelay;
     while (readIdx<0)
       readIdx += bufferSize;
     for (int i=0; i<size; ++i)
     {
       circularBuffer[writeIdx] =
-        circularBuffer[writeIdx] * feedback +
-        buf[i] * (1 - feedback);
+        buf[i] +
+        circularBuffer[writeIdx] * feedback;
       buf[i] =
         circularBuffer[readIdx] * dryWetMix +
         buf[i] * (1 - dryWetMix);
