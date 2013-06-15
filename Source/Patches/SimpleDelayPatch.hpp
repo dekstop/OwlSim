@@ -58,20 +58,15 @@ public:
     
     int size = input.getSize();
     float* buf = input.getSamples();
-    int readIdx = (writeIdx + 1) % sampleDelay;
-    while (readIdx<0)
-      readIdx += bufferSize;
     for (int i=0; i<size; ++i)
     {
-      circularBuffer[writeIdx] =
-        buf[i] +
-        circularBuffer[writeIdx] * feedback;
+      float delaySample = circularBuffer[writeIdx];
+      circularBuffer[writeIdx] = buf[i] + circularBuffer[writeIdx] * feedback;
       buf[i] =
-        circularBuffer[readIdx] * dryWetMix +
+        delaySample * dryWetMix +
         buf[i] * (1 - dryWetMix);
 
       writeIdx = (++writeIdx) % sampleDelay;
-      readIdx = (++readIdx) % sampleDelay;
     }
     output.setSamples(buf);
   }
