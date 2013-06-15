@@ -50,9 +50,9 @@ public:
       writeIdx = 0;
     }
 
-    unsigned int sampleDelay = getSampleDelayParameter(getRampedParameterValue(PARAMETER_A), rate);
+    unsigned int sampleDelay = getSampleDelay(getRampedParameterValue(PARAMETER_A), rate);
     float feedback = getRampedParameterValue(PARAMETER_B);
-    float bias = getBias(1 - getRampedParameterValue(PARAMETER_C));
+    float bias = getBiasExponent(1 - getRampedParameterValue(PARAMETER_C));
     float dryWetMix = getRampedParameterValue(PARAMETER_D);
     
     int size = input.getSize();
@@ -61,7 +61,8 @@ public:
     {
       float delaySample = circularBuffer[writeIdx];
       float v = buf[i] + circularBuffer[writeIdx] * feedback;
-      circularBuffer[writeIdx] = fminf(1, fmaxf(0, applySampleBias(v, bias))); // Guard: hard range limits.
+      v = applyBias(v, bias);
+      circularBuffer[writeIdx] = fminf(1, fmaxf(0, v)); // Guard: hard range limits.
       buf[i] = linearBlend(buf[i], delaySample, dryWetMix);
 
       writeIdx = (++writeIdx) % sampleDelay;
@@ -75,7 +76,7 @@ public:
   
 private:
   
-  unsigned int getSampleDelayParameter(float p1, float rate){
+  unsigned int getSampleDelay(float p1, float rate){
     return (MIN_DELAY + p1 * (MAX_DELAY-MIN_DELAY)) * rate;
   }
 
@@ -83,7 +84,7 @@ private:
   // - full-left (0) is "low bias"
   // - centre (0.5) is "no bias"
   // - full-right (1.0) is "high bias"
-  float getBias(float p1){
+  float getBiasExponent(float p1){
     if (p1 < 0.5)
     { // min .. med
       p1 = p1 * 2; // [0..1] range
@@ -95,7 +96,7 @@ private:
     }
   }
   
-  float applySampleBias(float v, float bias){
+  float applyBias(float v, float bias){
     return
       powf(fabs(v), bias) * // bias
       (v < 0 ? -1 : 1);    // sign
