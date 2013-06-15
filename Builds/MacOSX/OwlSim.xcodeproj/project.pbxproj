@@ -381,6 +381,7 @@
 		1AE935C4176A984B00C62E77 /* CircularBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CircularBuffer.hpp; path = ../../Source/Patches/CircularBuffer.hpp; sourceTree = "<group>"; };
 		1AE935C5176A984B00C62E77 /* ParametricEqPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ParametricEqPatch.hpp; path = ../../Source/Patches/ParametricEqPatch.hpp; sourceTree = "<group>"; };
 		1AE935C6176B1B3C00C62E77 /* BiasPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BiasPatch.hpp; path = ../../Source/Patches/BiasPatch.hpp; sourceTree = "<group>"; };
+		1AE935C7176CD50100C62E77 /* TripleTremoloPatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TripleTremoloPatch.hpp; path = ../../Source/Patches/TripleTremoloPatch.hpp; sourceTree = "<group>"; };
 		1AF5B75CC26865F7B20F4135 /* juce_MemoryMappedAudioFormatReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_MemoryMappedAudioFormatReader.h; path = ../../modules/juce_audio_formats/format/juce_MemoryMappedAudioFormatReader.h; sourceTree = SOURCE_ROOT; };
 		1B3ED674CA92DD3EB9708D12 /* juce_BufferedInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_BufferedInputStream.h; path = ../../modules/juce_core/streams/juce_BufferedInputStream.h; sourceTree = SOURCE_ROOT; };
 		1C046F79D9DE8ACD9F66FB14 /* juce_ios_Windowing.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_ios_Windowing.mm; path = ../../modules/juce_gui_basics/native/juce_ios_Windowing.mm; sourceTree = SOURCE_ROOT; };
@@ -1362,6 +1363,7 @@
 			isa = PBXGroup;
 			children = (
 				1A2F995F1765446700B637F0 /* DualTremoloPatch.hpp */,
+				1AE935C7176CD50100C62E77 /* TripleTremoloPatch.hpp */,
 				1AE935C6176B1B3C00C62E77 /* BiasPatch.hpp */,
 				1A4F6FC8176724CC003CE8EB /* SimpleDelayPatch.hpp */,
 				1A6AD9AD1769BAD300F81B55 /* SampleJitterPatch.hpp */,

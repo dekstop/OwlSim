@@ -1,8 +1,8 @@
 //
 //  BiasPatch.hpp
 //
-//  Adjust amplitude bias while retaining high peaks.
-//  This works best on normalised signals.
+//  A saturation/distortion effect: adjust amplitude bias while retaining high peaks.
+//  Variable low/no/high sample bias; this works best on normalised signals.
 //
 //  Created by martind on 14/06/2013.
 //  http://github.com/dekstop/OwlSim
