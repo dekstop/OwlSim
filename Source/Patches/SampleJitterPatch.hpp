@@ -80,7 +80,7 @@ public:
   }
   
   ~SampleJitterPatch(){
-    free(circularBuffer);
+    delete(circularBuffer);
   }
 
   

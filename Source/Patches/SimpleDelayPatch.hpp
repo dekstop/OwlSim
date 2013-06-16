@@ -72,7 +72,7 @@ public:
   }
   
   ~SimpleDelayPatch(){
-    free(circularBuffer);
+    delete(circularBuffer);
   }
 
   
